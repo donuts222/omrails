@@ -1,10 +1,11 @@
-$baseFontFamily: 'Josefin Slab', serif;
-@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+$baseFontFamily: 'Averia Serif Libre', cursive;
+@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300);
 
 @import 'bootstrap';
 
 body {
 	padding-top: 60px;
+	/*background-color: FF9600*/
 }
 
 @import 'bootstrap-responsive';
@@ -21,25 +22,27 @@ body {
 
 .box {
 	margin: 5px;
-	padding: 5px;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 1.4em;
 	float: left;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 8px;
 	box-shadow: 1px 1px 10px #444;
-	width: 214px;
+	width: 270px;
 }
 
 .box img {
 	display: block;
 	width: 100%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 }
 
 .description {
-	margin: 10px 0 5px;
+	margin: 7px 6px 3px;
+	font-size: 19px;
+	text-transform: capitalize;
+}
+
+.author {
+	margin: 5px 6px 5px;
 }
