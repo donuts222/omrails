@@ -5,9 +5,8 @@
 
   	<%= f.input :image, label: "Upload an Image" %>
   	<%= f.input :image_remote_url, label: "or enter a URL" %>
-    <%= f.input :description, as: :text, input_html: {rows: "3"} %>
-
-  <div class="form-actions">
+  	<div style = "position:relative; left: 180px; color:darkgray; font-weight:900"> Characters left: 26 </div>
+    <%= f.input :headline, as: :string, input_html: {maxlength: "26"} %>
     <%= f.button :submit, class: "btn btn-primary" %>
-  </div>
+ 
 <% end %>

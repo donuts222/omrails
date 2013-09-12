@@ -1,14 +1,29 @@
 $baseFontFamily: 'Averia Serif Libre', cursive;
 @import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300);
 
+$navbarBackgroundHighlight: #FFD69F;
+$navbarBackground: #FFD69F;
+$navbarLinkColor: black;
+$navbarHeight: 50px;
+
+/* For Orange Navbar*/
+/*$navbarBackgroundHighlight: #FCE9D0;*/
+/*$navbarBackground: #FFB450;*/
+
 @import 'bootstrap';
 
 body {
 	padding-top: 60px;
-	/*background-color: FF9600*/
+	background-color: #99cbff;
+	/*LightSlateGray #778899; Robins Egg #e6f9f9; orange #FFD69F or #FFE5C2*/
 }
 
 @import 'bootstrap-responsive';
+
+.navbar-inner{
+    @include box-shadow(none !important);
+    border: 0;
+}
 
 .footer {
 	margin-top: 50px;
@@ -22,7 +37,7 @@ body {
 
 .box {
 	margin: 5px;
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 1.4em;
 	float: left;
 	-webkit-border-radius: 5px;
@@ -30,6 +45,7 @@ body {
 	border-radius: 8px;
 	box-shadow: 1px 1px 10px #444;
 	width: 270px;
+	background-color: white;
 }
 
 .box img {
@@ -37,8 +53,8 @@ body {
 	width: 100%;
 }
 
-.description {
-	margin: 7px 6px 3px;
+.headline {
+	margin: 7px 5px 4px;
 	font-size: 19px;
 	text-transform: capitalize;
 }
