@@ -1,4 +1,4 @@
-Omrails::Application.routes.draw do
+Travvl::Application.routes.draw do
   
   get "users/show"
 
