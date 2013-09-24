@@ -1,5 +1,8 @@
 class Pin < ActiveRecord::Base
-  attr_accessible :headline, :image, :image_remote_url
+  attr_accessible :headline, :image, :image_remote_url, :summary, :budget,
+    :duration, :party, :kids, :kids_count, :kids_age, :transportation, :transportation_arrangement,
+    :tourist_sites, :tourist_sites_description, :non_tourist_site, :non_tourist_site_description,
+    :non_tourist_site_trans, :advice, :comments
   has_attached_file :image, styles: { medium: "320x240>" }
   
   validates :headline, presence: true

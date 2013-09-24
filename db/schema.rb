@@ -11,18 +11,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130907012014) do
+ActiveRecord::Schema.define(:version => 20130912182746) do
 
   create_table "pins", :force => true do |t|
     t.string   "headline"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "image_remote_url"
+    t.text     "summary"
+    t.integer  "budget"
+    t.integer  "duration"
+    t.string   "party"
+    t.boolean  "kids"
+    t.integer  "kids_count"
+    t.integer  "kids_age"
+    t.string   "transportation"
+    t.text     "transportation_arrangement"
+    t.string   "tourist_sites"
+    t.text     "tourist_sites_description"
+    t.string   "non_tourist_site"
+    t.text     "non_tourist_site_description"
+    t.text     "non_tourist_site_trans"
+    t.text     "advice"
+    t.text     "comments"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"

@@ -2,10 +2,59 @@
 	<div class="span6 offset3">
 		<div class="well">
 			<%= image_tag @pin.image %>
-			<div class="headline">
-				<p>
+				<p class= "headline">
 				  <%= @pin.headline %>
 				</p>
+				<p class= "form">
+					<%= @pin.summary %>
+				<br>
+				<br>
+					<b>Overall budget:</b> $<%= @pin.budget %>
+				<br>
+				<br>
+					<b>Duration of trip:</b>	<%= @pin.duration %> days
+				<br>
+				<br>
+					<b>I traveled:</b> <%= @pin.party %>
+				<br>
+				<br>
+					<b>Kids:</b>
+						<%if @pin.kids==true %>
+							<%= @pin.kids_count %>
+						<br>
+							<b>Average age:</b> <%= @pin.kids_age %>
+						<% else %>
+							None 
+						<% end %>
+				<br>
+				<br>
+					<b>Transportation was used upon arrival:</b> <%= @pin.transportation %>		
+				<br>
+				<br>
+					<b>Transportation Arrangement:</b> <%= @pin.transportation_arrangement %>
+				<br>
+				<br>
+					<b>Tourist Sites:</b> <%= @pin.tourist_sites %>
+				<br>
+				<br>
+					<b>Description:</b> <%= @pin.tourist_sites_description %>
+				<br>
+				<br>
+					<b>Non Tourist Sites:</b> <%= @pin.non_tourist_site %>
+				<br>
+				<br>
+					<b>Non Tourist Site description:</b> <%= @pin.non_tourist_site_description %>
+				<br>
+				<br>
+					<b>Transportation to non tourist sites:</b> <%= @pin.non_tourist_site_trans %>
+				<br>
+				<br>
+					<b>Advice:</b> <%= @pin.advice %>
+				<br>
+				<br>	
+					<b>Comments:</b>	<%= @pin.comments %>
+				</p>
+				<hr>
 				<p>
 				  <%= link_to @pin.user.name, @pin.user %>
 				</p>
@@ -14,7 +63,6 @@
 				<%= link_to 'Delete', @pin, method: :delete, data: { confirm: 'Are you sure?' } %> |
 				<%= link_to 'Home', pins_path %>
 				<% end %>
-			</div>
 		</div>
 	</div>
 </div>

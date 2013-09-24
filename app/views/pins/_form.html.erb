@@ -4,9 +4,26 @@
   <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
   	<%= f.input :image, label: "Upload an Image" %>
-  	<%= f.input :image_remote_url, label: "or enter a URL" %>
+  	<%# = f.input :image_remote_url, label: "or enter a URL" %>
   	<div style = "position:relative; left: 180px; color:darkgray; font-weight:900"> Characters left: 26 </div>
     <%= f.input :headline, as: :string, input_html: {maxlength: "26"} %>
+    <%= f.input :summary, as: :text, input_html: {rows: "3"}, label: "Summary" %>
+    <%= f.input :budget, as: :integer, label: "Full budget" %> 
+    <%= f.input :duration, as: :integer, label: "Duration" %>
+    <%= f.input :party, as: :string, label: "Who did you travel with?" %>
+    <%= f.input :kids, as: :select, label: "Did you travel with kids?" %>
+    <%= f.input :kids_count, as: :integer, label: "How many kids did you travel with?" %>
+    <%= f.input :kids_age, as: :integer, label: "How old were the kids?" %>
+    <%= f.input :transportation, as: :string, label: "What types of transportation did you utilize once you arrived at your destination?" %>
+    <%= f.input :transportation_arrangement, as: :text, input_html: {rows: "3"}, label: "How did you arrange that transportation?" %>
+    <%= f.input :tourist_sites, as: :string, label: "List any tourist sites or activities you would recommend." %>
+    <%= f.input :tourist_sites_description, as: :text, input_html: {rows: "3"}, label: "List any details about the tourist sites." %>
+    <%= f.input :non_tourist_site, as: :string, label: "List any non-tourist sites you saw" %>
+    <%= f.input :non_tourist_site_description, as: :text, input_html: {rows: "3"}, label: "What did you like about those sites?" %>
+    <%= f.input :non_tourist_site_trans, as: :text, input_html: {rows: "3"}, label: "How did you get to the non-tourist site?" %>
+    <%= f.input :advice, as: :text, input_html: {rows: "5"}, label: "Do you have any advice for someone looking to take this trip?" %>
+    <%= f.input :comments, as: :text, input_html: {rows: "5"}, label: "Write any additional comments about this trip here." %>
+
     <%= f.button :submit, class: "btn btn-primary" %>
  
 <% end %>
