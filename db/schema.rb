@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130912182746) do
+ActiveRecord::Schema.define(:version => 20131002233346) do
 
   create_table "pins", :force => true do |t|
     t.string   "headline"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(:version => 20130912182746) do
     t.datetime "image_updated_at"
     t.string   "image_remote_url"
     t.text     "summary"
-    t.integer  "budget"
+    t.string   "budget"
     t.integer  "duration"
     t.string   "party"
     t.boolean  "kids"
     t.integer  "kids_count"
-    t.integer  "kids_age"
+    t.string   "kids_age"
     t.string   "transportation"
     t.text     "transportation_arrangement"
     t.string   "tourist_sites"
