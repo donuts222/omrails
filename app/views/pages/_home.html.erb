@@ -1,12 +1,22 @@
 <% if user_signed_in? %>
-		<h2>Where do you want to Travvl?</h2>
+	<div class="hero-unit" style="padding:30px 30px 50px 30px">
+		<div class="banner" align="center">
+		<%= image_tag "travvl2_beta.jpg", :style => "width:50%" %>
+			<div class="page-head" style="padding-top:50px; padding-bottom:0px">
+					Where do you want to Travvl?
+			</div>
+		</div>
+	</div>
 <% else %>	
 	<div class="hero-unit">
-		<h1>Welcome to Travvl!</h1>
-			<p>
-				Travvl is a site dedicated to sharing information about recent trips and helping others plan their's.
-			</p>
-				<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large"%>
-			</p>
+		<div class="banner" align="center">
+			<%= image_tag "travvl2_beta.jpg", :style => "width:65%" %>
+		</div>
+		<div class="invite" align="center">
+		 	<div class="input-append">
+      	<input class="span4" id="appendedInputButton; focusedInput" type="email" placeholder="user@example.com" style="padding: 11px 19px;font-size: 17.5px;">
+				<button class="btn btn-primary btn-large" type="button">Request An Invite <i class="icon-envelope icon-white"></i></button>
+			</div>
+		</div>
 	</div>
 <% end %>

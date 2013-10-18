@@ -1,7 +1,13 @@
-<%= render 'pages/home' %>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+</head>
 
-<div id="pins">
-  <%= render @pins %>
+<div style="font-family: 'Roboto', sans-serif;">
+	<%= render 'pages/home' %>
+
+	<div id="pins">
+	  <%= render @pins %>
+	</div>
+
+	<%= will_paginate @pins %>
 </div>
-
-<%= will_paginate @pins %>

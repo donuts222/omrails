@@ -1,8 +1,16 @@
-<h1><%= @user.name %></h1>
-<%= link_to "Edit Profile", edit_user_registration_path %>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+</head>
 
-<div id="pins">
-  <%= render @pins %>
+<div class="page-head">
+	<%= @user.name %>
+</div>
+<%= link_to "Edit Profile", edit_user_registration_path, :style=>"font-size:20px; padding-left:7px" %>
+
+<div style="font-family: 'Roboto', sans-serif;">
+	<div id="pins">
+	  <%= render @pins %>
+	</div>
 </div>
 
 <%= will_paginate @pins %>

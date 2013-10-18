@@ -55,6 +55,10 @@ GEM
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
+    devise_invitable (1.1.8)
+      actionmailer (~> 3.0)
+      devise (>= 2.1.2)
+      railties (~> 3.0)
     erubis (2.7.0)
     execjs (2.0.0)
     faker (1.2.0)
@@ -143,6 +147,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   coffee-rails (~> 3.2.1)
   devise
+  devise_invitable (~> 1.1.0)
   faker
   jquery-rails
   paperclip (~> 3.0)

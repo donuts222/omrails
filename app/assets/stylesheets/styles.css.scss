@@ -1,28 +1,72 @@
 $baseFontFamily: 'Averia Serif Libre', cursive;
 @import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300);
 
-$navbarBackgroundHighlight: #FFD69F;
-$navbarBackground: #FFD69F;
+@font-face{ 
+	font-family: 'rieslingregular';
+src: url('riesling-webfont.eot');
+src: url('riesling-webfont.eot?#iefix') format('embedded-opentype'),
+     url('riesling-webfont.woff') format('woff'),
+     url('riesling-webfont.ttf') format('truetype'),
+     url('riesling-webfont.svg#rieslingregular') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+
 $navbarLinkColor: black;
 $navbarHeight: 50px;
 
-/* For Orange Navbar*/
-/*$navbarBackgroundHighlight: #FCE9D0;*/
-/*$navbarBackground: #FFB450;*/
-
 @import 'bootstrap';
 
-body {
-	padding-top: 60px;
-	background-color: #99cbff;
-	/*LightSlateGray #778899; Robins Egg #e6f9f9; orange #FFD69F or #FFE5C2*/
-}
 
 @import 'bootstrap-responsive';
 
+body {
+	padding-top: 60px;
+	background-image: image-url("bg_gradient.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: absolute; 
+	/*LightSlateGray #778899; Robins Egg #e6f9f9;*/
+}
+
+.navbar-search .search-query {
+	background: rgba(255, 255, 255, 0.7);
+}
+
 .navbar-inner{
+	background: rgba(255, 255, 255, 0.8);
+	font-size: 18px;
+	text-align: bottom;
+	/* to get rid of shadowing
     @include box-shadow(none !important);
-    border: 0;
+    border: 0;*/
+}
+
+.invite {
+	padding-top: 18px;
+}
+
+
+.navbar .brand {
+	font-family: 'rieslingregular', Arial, sans-serif;
+	font-size: 53px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.hero-unit {
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	padding:40px;
+	padding-bottom: 50px;
+	border: 2px solid white;
+}
+
+.banner {
+	font-family: 'rieslingregular', Arial, sans-serif;
+	font-size: 85px;
+	text-transform: capitalize;
 }
 
 .footer {
@@ -39,13 +83,15 @@ body {
 	margin: 5px;
 	font-size: 11px;
 	line-height: 1.4em;
+	text-align: center;
 	float: left;
+	border: 2px solid white;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 8px;
 	box-shadow: 1px 1px 10px #444;
 	width: 270px;
-	background-color: white;
+	background: rgba(255, 255, 255, 0.4)
 }
 
 .box img {
@@ -71,4 +117,28 @@ body {
 .hr {
 	color: black;
 	background-color: black;
+}
+
+.form-actions {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.page-head {
+	font-family: 'rieslingregular', Arial, sans-serif;
+	font-size: 90px; /*6vw for scalable based on container size*/
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 45px;
+	padding-bottom: 40px;
+	letter-spacing: 1px;
+}
+
+.about-title {
+	font-size: 30px;
+	padding-bottom: 12px;
+}
+
+.about-body {
+	font-size: 16px;
+	line-height: 120%;
 }

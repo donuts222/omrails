@@ -8,6 +8,7 @@ gem 'aws-sdk'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'devise_invitable', '~> 1.1.0'
 
 group :production do
 	gem 'pg'

@@ -17,10 +17,13 @@
       <div class="nav-collapse collapse">
 		    <ul class="nav pull-right">
         <% if user_signed_in? %>
-          <li><%= link_to "Add Trip", new_pin_path %></li>
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Profile", current_user %></li>
-          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "+ Add Trip", new_pin_path %></li>
+          <li><form class="navbar-search">
+            <input type="text" class="search-query" placeholder="Search">
+          </form></li>
+          <li style="font-size:14px"><%= link_to "About", about_path %></li>
+          <li style="font-size:14px"><%= link_to "Profile", current_user %></li>
+          <li style="font-size:14px"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "About", about_path%></li>
 	        <li><%= link_to "Login", new_user_session_path %></li>

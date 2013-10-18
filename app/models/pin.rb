@@ -14,7 +14,7 @@ class Pin < ActiveRecord::Base
   validates :budget, presence: true
   validates :duration, presence: true
   validates :party, presence: true
-  validates_inclusion_of :kids, :in => [true, false]
+  validates :kids, inclusion: { in: [true, false] }
   validates :kids_count, presence: true, if: :kids?
   validates :kids_age, presence: true, if: :kids?
  
@@ -22,7 +22,7 @@ class Pin < ActiveRecord::Base
   belongs_to :user
 
   def kids?
-    :kids==true
+    :kids == "true"
   end
 
   def image_remote_url=(url_value)

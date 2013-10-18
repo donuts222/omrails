@@ -6,23 +6,42 @@
   	<%= f.input :image, label: "Upload an Image" %>
   	<%# = f.input :image_remote_url, label: "or enter a URL" %>
   <%#  <div style = "position:relative; color:darkgray; font-weight:900"> Characters left: 26 </div> %>
-    <%= f.input :headline, as: :string, input_html: {maxlength: "26"} %>
+    <%= f.input :headline, as: :string, input_html: {maxlength: "24"} %>
+
     <%= f.input :summary, as: :text, input_html: {rows: "3", :style=> 'width: 350px'}, label: "Summary" %>
+
     <%= f.input :budget, collection: ["<$500", "$500-$1,000", "$1,000-$2,000", "$2,000-$3,500", "$3,500-$5,500", "$5,500-$7,500", "$7,500-$10,000", "$10,000-$15,000", "$15,000-$20,000", "$20,000-$30,000", "$30,000+"], input_html: {:style=> 'width: 100px'}, label: "Full budget" %> 
+
     <%= f.input :duration, as: :integer, input_html: {:style=> 'width: 100px'}, label: "Duration of Trip (in days)" %>
+
     <%= f.input :party, collection: ["By Myself", "With a Group", "As a Couple", "As a Family"], label: "Who did you travel with?" %>
+
     <%= f.input :kids, as: :radio_buttons, label: "Did you travel with kids?" %>
+
     <%= f.input :kids_count, as: :integer, input_html: {:style=> 'width: 100px'}, label: "If yes, how many kids did you travel with?" %>
-    <%= f.collection_check_boxes :kids_age, [["Infant (0-1 Year)"], ["Toddler (1-3 Years)"], ["Preschool (3-5 Years)"], ["School Age (6-10 Years)"], ["Preteen (11-12 Years)"], ["Teenage (13-17 Years)"]], :last, :first, label: "What age groups are the kids in?" %>
+
+    <label class="checkbox inline">
+      <%= f.collection_check_boxes :kids_age, [["Infant (0-1 Year)"], ["Toddler (1-3 Years)"], ["Preschool (3-5 Years)"], ["School Age (6-10 Years)"], ["Preteen (11-12 Years)"], ["Teenage (13-17 Years)"]], :last, :first, label: "What age groups are the kids in?" %>
+    </label>
     <br>
+    <br>
+
     <%= f.input :transportation, as: :string, label: "What was the main type of transportation you utilized once you arrived at your destination?" %>
+
     <%= f.input :transportation_arrangement, as: :text, input_html: {rows: "3", :style=> 'width: 350px'}, label: "How did you arrange that transportation?" %>
+
     <%= f.input :tourist_sites, as: :string, label: "List any tourist sites or activities you would recommend." %>
+
     <%= f.input :tourist_sites_description, as: :text, input_html: {rows: "3", :style=> 'width: 350px'}, label: "List any details about the tourist sites." %>
+
     <%= f.input :non_tourist_site, as: :string, label: "List any non-tourist sites you saw" %>
+
     <%= f.input :non_tourist_site_description, as: :text, input_html: {rows: "3", :style=> 'width: 350px'}, label: "What did you like about those sites?" %>
+
     <%= f.input :non_tourist_site_trans, as: :text, input_html: {rows: "3", :style=> 'width: 350px'}, label: "How did you get to the non-tourist site?" %>
+
     <%= f.input :advice, as: :text, input_html: {rows: "5", :style=> 'width: 350px'}, label: "Do you have any advice for someone looking to take this trip?" %>
+
     <%= f.input :comments, as: :text, input_html: {rows: "5", :style=> 'width: 350px'}, label: "Write any additional comments about this trip here." %>
 
     <%= f.button :submit, class: "btn btn-primary" %>
