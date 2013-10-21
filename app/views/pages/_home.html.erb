@@ -1,5 +1,13 @@
 <% if user_signed_in? %>
 	<div class="hero-unit" style="padding:30px 30px 50px 30px">
+		<script type="text/javascript">
+							$(document).ready(function(){
+										$('.hero-unit').blurjs({
+											radius: 10,
+											overlay: 'rgba(255,255,255,0.4)'
+										});
+									});
+		</script>
 		<div class="banner" align="center">
 		<%= image_tag "travvl2_beta.jpg", :style => "width:50%" %>
 			<div class="page-head" style="padding-top:50px; padding-bottom:0px">
@@ -9,6 +17,14 @@
 	</div>
 <% else %>	
 	<div class="hero-unit">
+		<script type="text/javascript">
+							$(document).ready(function(){
+										$('.hero-unit').blurjs({
+											radius: 10,
+											overlay: 'rgba(255,255,255,0.4)'
+										});
+									});
+		</script>
 		<div class="banner" align="center">
 			<%= image_tag "travvl2_beta.jpg", :style => "width:65%" %>
 		</div>

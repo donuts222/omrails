@@ -23,8 +23,8 @@ $navbarHeight: 50px;
 
 body {
 	padding-top: 60px;
-	background-image: image-url("bg_gradient.jpg");
-	background-size: cover;
+	background-image: image-url("CRW_0709_final_bg.jpg");
+	background-size: cover !important;
 	background-attachment: fixed;
 	background-position: absolute; 
 	/*LightSlateGray #778899; Robins Egg #e6f9f9;*/
@@ -47,6 +47,19 @@ body {
 	padding-top: 18px;
 }
 
+/*
+In place of Hero Unit
+.welcome{
+	align: center;
+	width: 1000px;
+	height: 412px;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0.3);
+	padding:40px;
+	padding-bottom: 50px;
+	border: 2px solid white;
+	margin-left: 10px;
+}*/
 
 .navbar .brand {
 	font-family: 'rieslingregular', Arial, sans-serif;
@@ -61,6 +74,8 @@ body {
 	padding:40px;
 	padding-bottom: 50px;
 	border: 2px solid white;
+	margin-left: 6px;
+	width: 1060px;
 }
 
 .banner {
@@ -131,6 +146,7 @@ body {
 	padding-top: 45px;
 	padding-bottom: 40px;
 	letter-spacing: 1px;
+	color: white;
 }
 
 .about-title {
