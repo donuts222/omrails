@@ -21,8 +21,9 @@
           <li><form class="navbar-search">
             <input type="text" class="search-query" placeholder="Search">
           </form></li>
-          <li style="font-size:14px"><%= link_to "About", about_path %></li>
           <li style="font-size:14px"><%= link_to "Profile", current_user %></li>
+          <li style="font-size:14px"><%= link_to "Plans", plans_path %></li>
+          <li style="font-size:14px"><%= link_to "About", about_path %></li>
           <li style="font-size:14px"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "About", about_path%></li>

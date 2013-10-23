@@ -16,3 +16,4 @@
 //=	require bootstrap
 //= require_tree .
 //= require blur.js
+//= require bootstrap.js

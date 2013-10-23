@@ -23,10 +23,10 @@ $navbarHeight: 50px;
 
 body {
 	padding-top: 60px;
-	background-image: image-url("CRW_0709_final_bg.jpg");
+	background-image: image-url("bg_gradient.jpg");
 	background-size: cover !important;
 	background-attachment: fixed;
-	background-position: absolute; 
+	background-position: top left; 
 	/*LightSlateGray #778899; Robins Egg #e6f9f9;*/
 }
 
@@ -146,7 +146,6 @@ In place of Hero Unit
 	padding-top: 45px;
 	padding-bottom: 40px;
 	letter-spacing: 1px;
-	color: white;
 }
 
 .about-title {

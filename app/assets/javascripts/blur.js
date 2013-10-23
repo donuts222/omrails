@@ -2,6 +2,19 @@
  * Blur.js
  * Copyright Jacob Kelley
  * MIT License
+ * Blur Hero-unit
+ *		<script type="text/javascript">
+ *							$(document).ready(function(){
+ *										$('.hero-unit').blurjs({
+ *											radius: 20,
+ *											overlay: 'rgba(255,255,255,0.4)'
+ *										});
+ *									});
+ *		</script>
+ *
+ * For Pins to have blur copy the script above into div where the pins partial is rendered - just below the render
+ * and call the script to run on .box
+ *
  */
 
 (function ($) {

@@ -1,5 +1,8 @@
 Travvl::Application.routes.draw do
   
+  resources :plans
+
+
   get "users/show"
 
   resources :pins
